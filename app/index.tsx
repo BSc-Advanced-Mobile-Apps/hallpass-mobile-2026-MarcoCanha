@@ -19,6 +19,7 @@ export default function HomeScreen() {
   return (
     <View className="bg-background flex-1 items-center justify-center gap-5 p-6">
       <View className="text-foreground flex flex-row text-center">HallPass!</View>
+      <Task task={task} />
     </View>
   );
 }
