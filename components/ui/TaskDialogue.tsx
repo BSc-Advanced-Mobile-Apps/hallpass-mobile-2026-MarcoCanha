@@ -49,11 +49,11 @@ export function TaskDialogue({
     setTask(nextTask);
     if (onSave) {
       onSave(nextTask);
+
       return;
     }
     setEditedTitle('');
     setEditedCategory('');
-
     setShowDialog(false);
   };
 
@@ -65,12 +65,8 @@ export function TaskDialogue({
       </DialogHeader>
 
       <View className="gap-4">
-        <Input defaultValue={task.title} placeholder="Task Name" onChangeText={handleUpdateTitle} />
-        <Input
-          defaultValue={task.category}
-          placeholder="Notes"
-          onChangeText={handleUpdateCategory}
-        />
+        <Input value={editedTitle} placeholder="Task Name" onChangeText={handleUpdateTitle} />
+        <Input value={editedCategory} placeholder="Notes" onChangeText={handleUpdateCategory} />
       </View>
 
       <DialogFooter className="mt-4 flex flex-row gap-2">
