@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Checkbox } from '@/components/ui/checkbox';
 import { ScrollView, View } from 'react-native';
 import { Text } from '@/components/ui/text';
-import Task from '@/components/task';
+import Task from '@/components/Task';
 import { AddTask } from '@/components/AddTask';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
