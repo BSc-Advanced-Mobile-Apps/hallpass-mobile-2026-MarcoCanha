@@ -48,6 +48,14 @@ export default function Task({ task: initialTask, onUpdate }: TaskProps) {
         setTask={setTask}
         setShowDialog={setShowDialog}
         showDialog={showDialog}
+        onSave={(nextTask) => {
+          // update local state, close dialog and notify parent to persist
+          setTask(nextTask);
+          setShowDialog(false);
+          if (onUpdate) {
+            onUpdate(nextTask);
+          }
+        }}
       />
     </Dialog>
   );
